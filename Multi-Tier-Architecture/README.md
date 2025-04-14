@@ -47,5 +47,3 @@ The architecture consists of the following components:
 
 ---
 
-## 📁 Project Structure
-
