@@ -15,6 +15,12 @@ The architecture consists of the following components:
 - **Internet Gateway (IGW)** for public access
 - **NAT Gateway** for outbound internet access from private subnets
 
+### Security:
+- **Security Groups** to control traffic:
+  - ALB Security Group to allow HTTP/HTTPS from the internet
+  - App-tier SG to allow traffic from ALB only
+  - DB-tier SG to allow traffic only from App-tier
+
 ### Compute:
 - **Launch Template** for frontend Node.js application (filtered AMI via `data` block)
 - **Auto Scaling Group (ASG)** using the Launch Template
@@ -38,12 +44,12 @@ The architecture consists of the following components:
 
 ## 🚀 Features
 
-- Fully automated using Terraform.
+- Fully automated using Terraform
 - Follows best practices for HA, security, and scalability
 - Private database DNS for internal lookups
 - TLS termination at ALB
 - NAT gateway allows private instances to access the internet securely
 - Remote backend for centralized state management
+- Granular **Security Groups** to control access between tiers
 
 ---
-
