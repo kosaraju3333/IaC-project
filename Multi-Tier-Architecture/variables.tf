@@ -1,3 +1,6 @@
+variable "region" {
+  description = "Region"
+}
 variable "vpc-cidr-block" {
     description = "CIDR Block for VPC"
 }
@@ -105,3 +108,7 @@ variable "portal-app-db-instance-name" {
 variable "route53-private-zone-id" {
     description = "private zone-id "
 }
+
+variable "ssl_certificate_arn" {
+    description = "SSL certificate arn"
+}  
